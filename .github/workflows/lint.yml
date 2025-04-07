@@ -21,3 +21,9 @@ jobs:
             - name: Print out result
               run: |
                 cat pylint_results.log
+            - name: Upload pylint result
+              uses: actions/upload-artifact@v3
+              with: 
+                name: lint_results
+                path: |
+                    pylint_results.log
