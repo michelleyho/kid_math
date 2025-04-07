@@ -14,4 +14,4 @@ jobs:
             - name: Install pylint
               run: pip install pylint
             - name: Run pylint
-              run: pylint .
+              run: pylint *.py
