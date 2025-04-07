@@ -17,4 +17,7 @@ jobs:
                 pip install pylint
             - name: Run pylint
               run: |
-                find . -name '*.py' -exec pylint {} \;
+                find . -name '*.py' -exec pylint {} \; > pylint_results.log
+            - name: Print out result
+              run: |
+                cat pylint_results.log
